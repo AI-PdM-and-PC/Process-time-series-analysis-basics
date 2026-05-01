@@ -1,0 +1,36 @@
+# requirements.txt for MyBinder
+# Repository: AI-PdM-and-PC / Process-time-series-analysis-basics
+# Purpose: process time-series analysis notebooks, interpolation, TCLab examples,
+#          PSD/Welch, STL/MSTL, and a basic GRU deep-learning example.
+#
+# Version ranges are bounded for reproducibility, but not pinned exactly,
+# so Binder can still resolve compatible builds in the future.
+
+# Core scientific Python stack
+numpy>=1.26,<2.3
+pandas>=2.2,<3.0
+matplotlib>=3.8,<4.0
+scipy>=1.13,<2.0
+
+# Time-series diagnostics and decomposition
+statsmodels>=0.14.4,<0.15
+
+# Machine-learning utilities used in the GRU/time-series notebook
+scikit-learn>=1.4,<2.0
+joblib>=1.4,<2.0
+
+# Deep-learning example notebook
+# TensorFlow is comparatively heavy on Binder.
+# Use runtime.txt with python-3.11 for a more stable Binder build.
+tensorflow>=2.16,<2.19
+
+# TCLab examples
+# Real USB hardware access will not work in Binder,
+# but simulation-oriented cells and imports can still be useful.
+tclab>=1.0,<2.0
+
+# Notebook/UI support
+ipython>=8.20,<9.0
+ipywidgets>=8.1,<9.0
+jupyterlab>=4.2,<5.0
+notebook>=7.2,<8.0
